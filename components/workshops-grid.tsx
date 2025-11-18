@@ -1,3 +1,10 @@
+'use client'
+
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { EnrollmentModal } from '@/components/enrollment-modal'
+import { ThankYouModal } from '@/components/thank-you-modal'
+
 const workshops = [
   {
     id: 1,
@@ -44,25 +51,58 @@ const workshops = [
 ]
 
 export function WorkshopsGrid() {
+  const [enrollmentModalOpen, setEnrollmentModalOpen] = useState(false)
+  const [thankYouModalOpen, setThankYouModalOpen] = useState(false)
+  const [selectedWorkshop, setSelectedWorkshop] = useState<typeof workshops[0] | null>(null)
+
+  const handleEnrollClick = (workshop: typeof workshops[0]) => {
+    setSelectedWorkshop(workshop)
+    setEnrollmentModalOpen(true)
+  }
+
+  const handleEnrollmentSuccess = () => {
+    setThankYouModalOpen(true)
+  }
+
   return (
-    <div className="grid md:grid-cols-2 gap-6">
-      {workshops.map((workshop) => (
-        <div key={workshop.id} className="bg-card border border-border rounded-lg p-8 hover:border-primary transition">
-          <h3 className="text-xl font-semibold mb-3 text-primary">{workshop.title}</h3>
-          <p className="text-muted-foreground mb-6">{workshop.description}</p>
-          <div className="flex flex-wrap gap-3">
-            <span className="text-xs bg-secondary text-secondary-foreground px-3 py-1 rounded">
-              {workshop.level}
-            </span>
-            <span className="text-xs bg-secondary text-secondary-foreground px-3 py-1 rounded">
-              {workshop.duration}
-            </span>
+    <>
+      <div className="grid md:grid-cols-2 gap-6">
+        {workshops.map((workshop) => (
+          <div key={workshop.id} className="bg-card border border-border rounded-lg p-8 hover:border-primary transition">
+            <h3 className="text-xl font-semibold mb-3 text-primary">{workshop.title}</h3>
+            <p className="text-muted-foreground mb-6">{workshop.description}</p>
+            <div className="flex flex-wrap gap-3">
+              <span className="text-xs bg-secondary text-secondary-foreground px-3 py-1 rounded">
+                {workshop.level}
+              </span>
+              <span className="text-xs bg-secondary text-secondary-foreground px-3 py-1 rounded">
+                {workshop.duration}
+              </span>
+            </div>
+            <Button
+              onClick={() => handleEnrollClick(workshop)}
+              className="mt-6 w-full"
+            >
+              Enroll Now
+            </Button>
           </div>
-          <button className="mt-6 w-full bg-primary text-primary-foreground py-2 rounded hover:bg-primary/90 transition">
-            Enroll Now
-          </button>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      {selectedWorkshop && (
+        <EnrollmentModal
+          open={enrollmentModalOpen}
+          onOpenChange={setEnrollmentModalOpen}
+          workshopId={selectedWorkshop.id}
+          workshopTitle={selectedWorkshop.title}
+          onSuccess={handleEnrollmentSuccess}
+        />
+      )}
+
+      <ThankYouModal
+        open={thankYouModalOpen}
+        onOpenChange={setThankYouModalOpen}
+      />
+    </>
   )
 }
