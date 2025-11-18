@@ -1,8 +1,16 @@
+'use server'
+
 import { actionClient } from "@/lib/safe-action";
 import { z } from "zod";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    throw new Error("Missing RESEND_API_KEY environment variable. Please configure it to enable workshop enrollment emails.");
+  }
+  return new Resend(apiKey);
+};
 
 const enrollSchema = z.object({
   firstName: z.string().min(1, "First name is required"),
@@ -61,6 +69,8 @@ export const enrollWorkshopAction = actionClient
 
     try {
       // Send confirmation email to user
+      const resend = getResendClient();
+
       await resend.emails.send({
         from: process.env.RESEND_FROM_EMAIL || "noreply@yourdomain.com",
         to: email,
