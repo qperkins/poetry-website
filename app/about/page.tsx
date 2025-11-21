@@ -8,15 +8,14 @@ export default function AboutPage() {
       <main className="pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="mb-16">
-            <h1 className="mb-8">About Pamela D. Pete</h1>
+            <h1 className="mb-8">About Pamela D.</h1>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="md:col-span-1">
-                <div className="w-full aspect-square bg-muted rounded-lg mb-4" />
-                <p className="text-sm text-muted-foreground">Author portrait placeholder</p>
+                <img src="/pamlogo.png" alt="Pamela D." className="w-full aspect-square object-contain rounded-lg mb-4" />
               </div>
               <div className="md:col-span-2 space-y-6 text-lg leading-relaxed">
                 <p>
-                  Pamela D. Pete is an accomplished poet, educator, and speaker dedicated to the transformative power of words. With over two decades of experience in contemporary poetry, she has touched the lives of thousands through her written works and dynamic presentations.
+                  Pamela D. is an accomplished poet, educator, and speaker dedicated to the transformative power of words. With over two decades of experience in contemporary poetry, she has touched the lives of thousands through her written works and dynamic presentations.
                 </p>
                 <p>
                   Her poetry explores themes of identity, resilience, love, and social consciousness. Known for her lyrical voice and profound insights, Pamela's work has been featured in prestigious literary journals and anthologies.
@@ -31,9 +30,10 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-primary font-semibold mb-2">Awards & Recognition</h3>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• National Poetry Prize 2022</li>
-                  <li>• Literary Excellence Award</li>
-                  <li>• Featured Poet, International Review</li>
+                  <li>• Johnathan Sprinkles "Top Speaker Award" 2019, TX</li>
+                  <li>• Featured Poet HIF Women's Ministry, CA</li>
+                  <li>• Key note speaker - Chapel 3, Wright Patterson AFB, OH</li>
+                  <li>• Guest speaker EXXON, Baytown TX</li>
                 </ul>
               </div>
               <div>

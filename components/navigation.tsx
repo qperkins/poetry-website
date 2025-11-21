@@ -10,8 +10,8 @@ export function Navigation() {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <nav className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-primary">
-          Pamela D. Pete
+        <Link href="/" className="flex items-center">
+          <img src="/pamlogo.png" alt="Pamela D." className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

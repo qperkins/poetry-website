@@ -11,7 +11,7 @@ export default function PoemsPage() {
           <div className="mb-12">
             <h1 className="mb-4">Poetry Collections</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Explore the complete works of Pamela D. Pete. Each poem is a journey through emotion, reflection, and the human experience.
+              Explore the complete works of Pamela D. Each poem is a journey through emotion, reflection, and the human experience.
             </p>
           </div>
           <PoemsGrid />

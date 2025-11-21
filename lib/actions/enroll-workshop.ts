@@ -92,7 +92,7 @@ export const enrollWorkshopAction = actionClient
               </a>
             </div>
             <p>We look forward to seeing you at the workshop!</p>
-            <p>Best regards,<br>Pamela D. Pete</p>
+            <p>Best regards,<br>Pamela D.</p>
           </div>
         `,
       });

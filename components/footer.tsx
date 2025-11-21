@@ -7,7 +7,10 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Pamela D. Pete</h4>
+            <div className="flex items-center gap-3 mb-4">
+              <img src="/pamlogo.png" alt="Pamela D." className="h-8 w-auto" />
+              <h4 className="font-semibold text-foreground">Pamela D.</h4>
+            </div>
             <p className="text-muted-foreground text-sm">
               Poet, educator, and speaker inspiring transformation through words.
             </p>
@@ -28,8 +31,8 @@ export function Footer() {
             <ul className="space-y-2 text-muted-foreground text-sm">
               <li><Link href="/about" className="hover:text-primary transition">About</Link></li>
               <li><Link href="/contact" className="hover:text-primary transition">Contact</Link></li>
-              <li><a href="#" className="hover:text-primary transition">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-primary transition">Terms of Service</a></li>
+              <li><Link href="/privacy" className="hover:text-primary transition">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-primary transition">Terms of Service</Link></li>
             </ul>
           </div>
 
@@ -53,7 +56,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground text-sm">
-          <p>&copy; 2025 Pamela D. Pete. All rights reserved.</p>
+          <p>&copy; 2025 Pamela D. All rights reserved.</p>
         </div>
       </div>
     </footer>

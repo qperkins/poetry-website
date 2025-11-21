@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Pamela D. Pete - Poet, Workshops & Speaking Events',
-  description: 'Discover the poetry, workshops, and speaking engagements of Pamela D. Pete. Inspiring words and transformative experiences.',
+  title: 'Pamela D. - Poet, Workshops & Speaking Events',
+  description: 'Discover the poetry, workshops, and speaking engagements of Pamela D. Inspiring words and transformative experiences.',
   generator: 'v0.app',
   icons: {
     icon: [

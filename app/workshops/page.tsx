@@ -11,7 +11,7 @@ export default function WorkshopsPage() {
           <div className="mb-12">
             <h1 className="mb-4">Poetry Workshops</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Join interactive workshops led by Pamela D. Pete. Learn the craft of poetry, discover your voice, and connect with fellow poets.
+              Join interactive workshops led by Pamela D. Learn the craft of poetry, discover your voice, and connect with fellow poets.
             </p>
           </div>
           <WorkshopsGrid />

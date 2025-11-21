@@ -11,7 +11,7 @@ export default function EventsPage() {
           <div className="mb-12">
             <h1 className="mb-4">Speaking Events</h1>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Join Pamela D. Pete at upcoming speaking engagements, poetry readings, and literary events across the country.
+              Join Pamela D. at upcoming speaking engagements, poetry readings, and literary events across the country.
             </p>
           </div>
           <EventsList />
