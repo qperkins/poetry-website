@@ -7,7 +7,7 @@ export function HeroSection() {
     <section className="pt-32 pb-24 px-4">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="mb-6 text-6xl md:text-7xl leading-tight">
-          Words That <span className="text-primary">Resonate</span>
+          Words That <span className="text-primary">Heal</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
           Discover contemporary poetry, transformative workshops, and inspiring speaking engagements with Pamela D.
